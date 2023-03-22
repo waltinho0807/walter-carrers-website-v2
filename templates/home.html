@@ -14,13 +14,21 @@
     </style>
   </head>
   <body>
+    {% include 'nav.html' %}
   <div class="container">
     <h1 class="text-center mt-2 mb-4">Jovian Carrers</h1>
     <img class="img-fluid" id="banner" src="https://walter-carrers-website.waltinho0807.repl.co/static/banner.jpg" />
     <h2 class="text-center">About Jovian</h2>
-    <p class="lead">
+  <div class="row" style="margin-bottom: 16px">
+      <div class=" col-md-6">
+        <p class="lead">
       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-    </p>
+       </p>
+      </div>
+      <div class="d-none d-md-block col-6">
+      <img src="/static/people.jpg" style="height:320px; border-radius: 4px" />
+      </div>  
+    </div>
     <h2 class="text-center mt-2 mb-4">Open Positions</h2>
     <div>
        {% for job in jobs %}
@@ -28,8 +36,8 @@
        {% endfor %}
     </div>
     <div class="text-center">
-      <button class="btn btn-primary large">Contact Us</button>
-      <p class="mt-4">Copyright 2022, Jovian</p>
+      <a href="mailto:someone@example.com" class="btn btn-primary large">Contact Us</a>
+      {% include 'footer.html' %}
     </div>
   </div>    
   </body>
