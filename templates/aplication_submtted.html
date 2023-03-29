@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aplication submitted</title>
+    {% include 'bootstrap.html'%}
+    <style>
+      #banner {
+        height: 360px;
+        width: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    {% include 'nav.html' %}
+  <div class="container">
+    
+    <h4>Full Name</h4>
+    <p>{{application['full_name']}}</p> 
+
+    <h4>Email</h4>
+    <p>{{application['email']}}</p>
+
+    <h4>LinkedIn</h4>
+    <p>{{application['linkedin_url']}}</p>
+
+    <h4>Education</h4>
+    <p>{{application['education']}}</p>
+
+    <h4>Work experience</h4>
+    <p>{{application['work_experience']}}</p>
+
+    <h4>Resume URL</h4>
+    <p>{{application['resume_url']}}</p>
+
+    
+    {% include 'footer.html' %}
+    </div>
+  </div>    
+  </body>
+</html>

@@ -7,16 +7,18 @@
   </head>
   <body>
     {% include 'nav.html' %}
+    <div class="container">
+      <h3 class="mb-2">{{job.title}}</>
+      <p class="lead">{{job.location}}</p>
     
-    <h3 class="mb-2">{{job.title}}</>
-    <p class="lead">{{job.location}}</p>
-    
-    <h3>Responsabilities</h3>
-    <p>{{job.responsabilities}}</p>
-    <h3>Requirements</h3>
-    <p>{{job.requirements}}</p>
-    <h4>Salary</h4>
-    <p>{{job.currency}}{{job.salary}}</p>
+      <h3>Responsabilities</h3>
+      <p>{{job.responsabilities}}</p>
+      <h3>Requirements</h3>
+      <p>{{job.requirements}}</p>
+      <h4>Salary</h4>
+      <p>{{job.currency}}{{job.salary}}</p>
+        {% include 'application_form.html' %}
+   </div>
     {% include 'footer.html' %}
   </body>
 </html>
